@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
+import "./Products.css";
 
 function Products() {
   const [data, setData] = useState([]);
@@ -19,7 +20,7 @@ function Products() {
   }, []);
 
   return (
-    <div>
+    <div className="productCard">
       {data.map((product) => (
         <div key={product.id}>
           <div>
